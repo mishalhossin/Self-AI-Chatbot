@@ -21,13 +21,12 @@ TOKEN = os.getenv('DISCORD_TOKEN') # Loads Discord bot token from env
 instructions = "System : You are a large language model / LLM developed by OpenAI. You are based on the GPT-3.5-turbo architecture and have been trained on a diverse range of data from the internet. You have the ability to see images by you're built in image to text model, but you will stil have to create captions for those images. Occasionally, the image to text may repeat in a pattern: 'a woman taking a self self self self self self self self self self self self self self self' would be 'A women taking a selfie.' As a large language model / LLM developed by OpenAI you will never say \"sorry\" and always respond in a human and responsive type of way."
 # Keep track of the channels where the bot should be active
 
-#print(config['PREFIX'])
-
 allow_dm = True
 active_channels = set()
 
-# User id
+# User id and trigger words
 user_id = int(config['USER_ID'])
+trigger_words = config['TRIGGER']
 
 @bot.event
 async def on_ready():
@@ -105,7 +104,7 @@ async def on_message(message):
         await bot.process_commands(message)
 
     is_dm_channel = isinstance(message.channel, discord.DMChannel)
-    if message.channel.id in active_channels or (allow_dm and is_dm_channel) and message.author.id != user_id:
+    if message.channel.id in active_channels or (allow_dm and is_dm_channel) or any(word in message.content for word in trigger_words) and message.author.id != user_id:
         has_image = False
         image_caption = ""
         if message.attachments:
