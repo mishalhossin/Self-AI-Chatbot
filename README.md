@@ -6,7 +6,7 @@ My Discord
   </a>
 
 
-## Want to run as Discord bot instead of selfbot? then check this out: [DIscor-Chatbot](https://github.com/mishalhossin/Discord-AI-Chatbot/)
+## Want to run as Discord bot instead of selfbot? then check this out: [Discor-Chatbot](https://github.com/mishalhossin/Discord-AI-Chatbot/)
 
 # Self-Chat-bot 🤖
 This is a [Python](https://www.python.org)-based Discord self chatbot using the `discord.py-self`
