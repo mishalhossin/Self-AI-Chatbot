@@ -1,0 +1,16 @@
+aiohttp
+asyncio
+discord.py-self
+pynacl
+requests
+flask
+discord
+fake-useragent
+curl_cffi
+python-dotenv
+httpx
+tls-client
+pydantic
+pycryptodome
+PyYAML
+json
