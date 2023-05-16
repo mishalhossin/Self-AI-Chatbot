@@ -42,8 +42,17 @@ pip install -r requirements.txt
 ```
 ### Step 7. Put your discord user id in config.json
 Go in your discord setting and enable dev mode
+
+
+
 ![image](https://github.com/mishalhossin/Self-AI-Chatbot/assets/91066601/06a79bec-d852-4d1a-aef4-ddda0d52c25f)
+
+
+
+
 Click you profile and copy user id
+
+
 ![image](https://github.com/mishalhossin/Self-AI-Chatbot/assets/91066601/34c9517a-a9ff-4333-8460-98b53837119e)
 
 
