@@ -1,5 +1,5 @@
 {
     "USER_ID": "100000000000000000000",
-    "TRIGGER": ["word1", "word2", "word3"]
+    "TRIGGER": ["name", "<@USER_ID>", "alias"]
 }
   
