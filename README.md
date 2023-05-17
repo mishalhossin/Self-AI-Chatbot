@@ -17,13 +17,6 @@ This is a [Python](https://www.python.org)-based Discord self chatbot using the 
 - For all commands use `~help` in discord 
 # Steps to install and run 🚩 :
 
-## Before you start run these
-```bash
-pip uninstall discord.py
-pip uninstall discord-protos
-
-pip install discord.py-self
-```
 ### Step 1. 🎬 Git clone repository
 ```
 git clone https://github.com/mishalhossin/Discord-Chatbot-Gpt4Free
