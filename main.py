@@ -7,7 +7,7 @@ import selfcord
 import httpx
 from opengpt.models.completion.chatbase.model import Model
 from keep_alive import keep_alive
-from discord.ext import commands
+from selfcord.ext import commands
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -30,7 +30,7 @@ trigger_words = config['TRIGGER']
 
 @bot.event
 async def on_ready():
-    print(f"{bot.user.name} has connected to Discord!")
+    print(f"{bot.user.name} has connected to selfcord!")
 
 async def generate_response(prompt):
     response = (chatbase.GetAnswer(prompt=prompt, model="gpt-4"))
@@ -103,7 +103,7 @@ async def on_message(message):
     if message.content.startswith(bot.command_prefix) and message.author.id == user_id:
         await bot.process_commands(message)
 
-    is_dm_channel = isinstance(message.channel, discord.DMChannel)
+    is_dm_channel = isinstance(message.channel, selfcord.DMChannel)
     if message.channel.id in active_channels or (allow_dm and is_dm_channel) or any(word in message.content for word in trigger_words) and message.author.id != user_id:
         has_image = False
         image_caption = ""
@@ -159,7 +159,7 @@ async def changeusr(ctx, new_username):
         return 
     try:
         await bot.user.edit(username=new_username)
-    except discord.errors.HTTPException as e:
+    except selfcord.errors.HTTPException as e:
         await ctx.send("".join(e.text.split(":")[1:]))
 
 @bot.command(name="toggledm", description="Toggle DM for chatting.")
