@@ -3,7 +3,7 @@ import re
 import json
 import asyncio
 import aiohttp
-import discord
+import selfcord
 import httpx
 from opengpt.models.completion.chatbase.model import Model
 from keep_alive import keep_alive
